@@ -7,3 +7,6 @@ if( true ){
 }
 
 console.log(nombre);
+
+//LAs variables Let solo pueden ser Inicializadas una vez.
+//Las variables Var se pueden Inicializar varias veces. 
