@@ -59,9 +59,9 @@ getEmpleado(1, (err, empleado)=> {
     getSalario(empleado, (err, resp) => {
         if (err) {
             return console.log(err);
-        }
+        };
 
         console.log(`El salario de ${ resp.nombre} es de ${ resp.salario}$`);
-    }
+    });
 
 });
