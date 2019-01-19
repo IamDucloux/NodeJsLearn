@@ -1,20 +1,6 @@
-const argv = require('yargs')
-    .command('Listar', 'Imprime en consola la tabla de multiplicar', {
-        base: {
-            demand: true,
-            alias: 'b'
-        },
-        limite: {
-            alias: 'l',
-            default: 10
-        },
-        crear: {
-            alias: 'c',
+const argv = require('./config/yargs').argv;
+const colors = require('colors');
 
-        }
-    })
-    .help()
-    .argv;
 
 
 
@@ -30,7 +16,7 @@ switch (comando) {
     case 'crear':
         console.log('crear');
         crearArchivo(argv.base, argv.limite)
-            .then(archivo => console.log(`Archivo creado: ${archivo}`))
+            .then(archivo => console.log(`Archivo creado: ${colors.green(archivo)}`))
             .catch(e => console.log(e));
 
         break;
